@@ -2,13 +2,19 @@ import React from 'react';
 import styled from "styled-components";
 import {ButtonStyled} from "../buttons/Button";
 
-export const Menu = () => {
+
+
+export const Menu = (props: {menuItems: Array<string>
+}) => {
     return (
         <NavStyle>
             <UlMenu>
-                <li><a href='https://www.youtube.com/?app=desktop&hl=ru&gl=BY'>Services</a></li>
-                <li><a href='https://www.youtube.com/?app=desktop&hl=ru&gl=BY'>Works</a></li>
-                <li><a href='https://www.youtube.com/?app=desktop&hl=ru&gl=BY'>Blog</a></li>
+                {props.menuItems.map((item:string,index:number)=> {
+                   return( <li key={index}>
+                       <a href='https://www.youtube.com/?app=desktop&hl=ru&gl=BY'>{item}</a>
+                   </li>)
+                })}
+
             </UlMenu>
             <ButtonStyled as='a' href='#' width='131px'>Hire me</ButtonStyled>
         </NavStyle>
