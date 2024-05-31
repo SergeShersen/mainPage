@@ -1,5 +1,6 @@
 
 import styled from "styled-components";
+import {myTheme} from "../../styles/Theme.styled";
 
 type SubTitleProps = {
     marginBottom?: string
@@ -16,7 +17,7 @@ export const SubTitles =styled.h2<SubTitleProps>`
     color: #374151;
     margin-bottom: ${props => props.marginBottom || 0};
     span {
-        color: #3730a3;
+        color: ${myTheme.colors.secondaryBg};
     }
 `
 
