@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {FlexWrapper} from "../../components/flexWrapper/FlexWrapper";
 import {Icons} from "../../components/icons/Icons";
 import {Conatiner} from "../../components/container/Conatiner";
+import {myTheme} from "../../styles/Theme.styled";
 
 export const Trusted = () => {
     return (
@@ -34,6 +35,13 @@ export const Trusted = () => {
 const TrustedStyled =styled.div`
     background: #fef2f2;
     padding: 100px 0;
+    a {
+        color: ${myTheme.colors.iconsColor};
+            &:hover {
+                color: ${myTheme.colors.secondaryBg};
+            }
+        }
+
 `
 const TitleTrusted =styled.h2`
     margin-bottom: 20px;

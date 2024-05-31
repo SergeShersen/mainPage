@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {ButtonStyled} from "../buttons/Button";
+import {myTheme} from "../../styles/Theme.styled";
 
 
 
@@ -44,6 +45,9 @@ const UlMenu = styled.ul`
         a {
             text-decoration: none;
             color: #6b7280;
+            &:hover {
+                color: ${myTheme.colors.secondaryBg};
+            }
         }
     }
 `
