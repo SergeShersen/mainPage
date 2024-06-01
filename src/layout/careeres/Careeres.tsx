@@ -23,5 +23,5 @@ export const Careeres = () => {
 };
 
 const CareersStyled = styled.div`
-    padding-bottom: 150px;
+    padding: 150px 0;
 `

@@ -28,9 +28,9 @@
         <path d="M23.3333 11.6666V18.9582C23.3333 20.1186 23.7943 21.2314 24.6147 22.0518C25.4352 22.8723 26.548 23.3332 27.7083 23.3332C28.8687 23.3332 29.9815 22.8723 30.8019 22.0518C31.6224 21.2314 32.0833 20.1186 32.0833 18.9582V17.4999C32.0831 14.2085 30.9695 11.0139 28.9235 8.43568C26.8776 5.85743 24.0196 4.04711 20.8143 3.29909C17.609 2.55107 14.2449 2.90934 11.2691 4.31565C8.2932 5.72196 5.88058 8.09359 4.4235 11.0449C2.96643 13.9962 2.55058 17.3537 3.24358 20.5713C3.93658 23.789 5.69768 26.6775 8.24051 28.7674C10.7833 30.8572 13.9583 32.0254 17.2493 32.082C20.5402 32.1386 23.7535 31.0803 26.3667 29.0791" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
     </g>
     <g id="chart">
-        <path d="M30 33.3333V16.6666" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M20 33.3333V6.66663" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M10 33.3334V23.3334" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M30 33.3333V16.6666" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M20 33.3333V6.66663" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M10 33.3334V23.3334" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </g>
     <g id="codepen">
         <path d="M17.5 2.91675L32.0833 12.3959V22.6042L17.5 32.0834L2.91667 22.6042V12.3959L17.5 2.91675Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
