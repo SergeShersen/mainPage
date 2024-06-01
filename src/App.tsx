@@ -8,6 +8,7 @@ import {Footer} from "./layout/footer/Footer";
 import {Planning} from "./layout/planning/Planning";
 import {Careeres} from "./layout/careeres/Careeres";
 import {Skillss} from "./layout/skillss/Skillss";
+import {FormPage} from "./layout/forms/FormPage";
 
 
 
@@ -20,6 +21,7 @@ function App() {
             <Trusted/>
             <Progect/>
             <Planning/>
+            <FormPage/>
             <Careeres/>
             <Footer/>
         </div>

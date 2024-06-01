@@ -4,7 +4,6 @@ import {Logo} from "../../components/logo/Logo";
 import {Menu} from "../../components/menu/Menu";
 import {Conatiner} from "../../components/container/Conatiner";
 import {FlexWrapper} from "../../components/flexWrapper/FlexWrapper";
-import {myTheme} from "../../styles/Theme.styled";
 
 const items = ['Services','Works','Blog']
 
