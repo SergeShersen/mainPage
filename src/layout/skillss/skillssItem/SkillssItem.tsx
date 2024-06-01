@@ -10,18 +10,7 @@ type skilssType = {
 }
 
 export const SkillssItem = (props: skilssType) => {
-    if(props.bottom === '40'){
-        return (
-            <SkillItemWrapperBottom>
-                <SkillsSubtitle>{props.title}</SkillsSubtitle>
-                <SkillsDescr>{props.description}</SkillsDescr>
-                <FlexWrapper align="center">
-                    <SkillsLink href='#'>See Works</SkillsLink>
-                    <Icons iconId={'right'} width={'35'} height={'35'}/>
-                </FlexWrapper>
-            </SkillItemWrapperBottom>
-        )
-    }else {
+
         return (
             <SkillItemWrapper >
                 <SkillsSubtitle>{props.title}</SkillsSubtitle>
@@ -32,16 +21,13 @@ export const SkillssItem = (props: skilssType) => {
                 </FlexWrapper>
             </SkillItemWrapper>
         )
-    }
+
 };
 
 const SkillItemWrapper = styled.div`
     width: 311px;
-
-`
-const SkillItemWrapperBottom = styled.div`
-    width: 311px;
     margin-bottom: 40px;
+
 `
 const SkillsSubtitle = styled.h2`
     margin-bottom: 0;

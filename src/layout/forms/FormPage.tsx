@@ -26,7 +26,7 @@ export const FormPage = () => {
 };
 
 const FormPageStyled = styled.div`
-    padding: 50px 0;
+    padding: 100px 0;
     background-color: ${myTheme.colors.primoryBg};
 `
 const FormImg = styled.img`
