@@ -5,11 +5,18 @@ import {myTheme} from "../../styles/Theme.styled";
 
 export const Forms = () => {
     return (
-        <FormsStyled>
+        <FormsStyled action='#' method='get'>
             <label>Jessica Strosin</label>
-            <InputStyled placeholder="Write your name"  type='text'/>
-            <InputStyled placeholder="Write your number" type='number'/>
-            <InputStyled placeholder="Write your email address" type='email'/>
+            <InputStyled placeholder="Write your name"  type='text' name='userName'/>
+            <InputStyled placeholder="Write your number" type='number' name='userNumber'/>
+            <InputStyled placeholder="Write your email address" type='email' name='userEmail'/>
+            <DatalistStyled as='input' id='project' list='projectsList' placeholder='Write your project'/>
+            <DatalistStyled id='projectsList'>
+                <option value='project_1'>project_4</option>
+                <option value='project_2'>project_3</option>
+                <option value='project_3'>project_2</option>
+                <option value='project_4'>project_1</option>
+            </DatalistStyled>
             <ButtonStyled width='304px' href='#' color=''>Subscribe it</ButtonStyled>
         </FormsStyled>
     );
@@ -35,4 +42,13 @@ const  InputStyled = styled.input`
     color: ${myTheme.colors.secondaryBg};
     border: none;
     padding-left: 20px;
+`
+const DatalistStyled = styled.datalist`
+    width: 304px;
+    font-weight: 400;
+    font-size: 17px;
+    height: 50px;
+    color: ${myTheme.colors.secondaryBg};
+    border: none;
+    padding-left: 20px; 
 `
