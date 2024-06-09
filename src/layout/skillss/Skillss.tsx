@@ -5,6 +5,7 @@ import {SubTitles} from "../../components/subTitles/SubTitles";
 import {FlexWrapper} from "../../components/flexWrapper/FlexWrapper";
 import photoSkills from "../../assets/img/promo.webp"
 import {SkillssItem} from "./skillssItem/SkillssItem";
+import {myTheme} from "../../styles/Theme.styled";
 
 
 
@@ -14,10 +15,10 @@ export const Skillss = () => {
             <Conatiner>
                 <SubTitles marginBottom='150px'>From beginning ideas to individual integrity,<br/> rich identity from the line
                     <span> on the paper to final projects </span></SubTitles>
-                <FlexWrapper justify="space-between" align='center'>
+                <FlexWrapper justify="space-between" align='center' wrap='wrap'>
                     <img src={photoSkills}/>
                     <WrapperBox>
-                        <FlexWrapper justify="space-between" wrap="wrap" >
+                        <FlexWrapper justify="space-around" wrap="wrap"  >
                             <SkillssItem  title={'Web design'} description={'Provide our customers with optimized user-friendly experience to increase the efficiency of digital products.'}/>
                             <SkillssItem  title={'Mobile design'} description={'Mobile application development is a highlight that businesses are interested in at the moment and in the future.'}/>
                             <SkillssItem  title={'Branding'} description={'Understanding the business and their target customers, I’m the bridges to bring the brand closer to their clients.'}/>
@@ -35,8 +36,26 @@ export const Skillss = () => {
 
 const SkillssStyled = styled.div`
     padding-bottom: 150px;
+    img {
+        max-width: 440px;
+        width: 100%;
+        object-fit: cover;
+    }
+    @media ${myTheme.media.tablet} {
+
+        img {
+            margin: 0 auto;
+            margin-bottom: 40px;
+        }
+    }
 `
 const WrapperBox =styled.div`
-    width: 690px;
+    max-width: 690px;
+    width: 100%;
     height: 532px;
+    @media ${myTheme.media.tablet} {
+        max-width: 768px;
+        width: 100%;
+
+    }
 `

@@ -41,6 +41,13 @@ const TrustedStyled =styled.div`
                 color: ${myTheme.colors.secondaryBg};
             }
         }
+    @media ${myTheme.media.tablet} {
+        a {
+            &:last-child {
+                display: none;
+            }
+        }
+    }
 
 `
 const TitleTrusted =styled.h2`

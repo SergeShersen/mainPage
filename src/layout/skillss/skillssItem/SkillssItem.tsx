@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {FlexWrapper} from "../../../components/flexWrapper/FlexWrapper";
 import {Icons} from "../../../components/icons/Icons";
+import {myTheme} from "../../../styles/Theme.styled";
 
 type skilssType = {
     bottom?: string
@@ -25,17 +26,19 @@ export const SkillssItem = (props: skilssType) => {
 };
 
 const SkillItemWrapper = styled.div`
-    width: 311px;
+    max-width: 311px;
+    width: 100%;
     margin-bottom: 40px;
-
 `
 const SkillsSubtitle = styled.h2`
-    margin-bottom: 0;
-    margin-top: 0;
     font-weight: 600;
     font-size: 18px;
     line-height: 156%;
     color: #1f2937;
+    @media ${myTheme.media.tablet} {
+        text-align: center;
+    }
+    
 `
 
 const SkillsDescr = styled.p`

@@ -15,7 +15,7 @@ export const FormPage = () => {
         <FormPageStyled>
             <Conatiner>
                 <SubTitles marginBottom='40px'>Subscribe</SubTitles>
-                <FlexWrapper  align='center' justify='center' >
+                <FlexWrapper  align='center' justify='space-around' wrap='wrap'>
                     <FormImg src={photoForms}/>
                     <Forms/>
                 </FlexWrapper>
@@ -30,8 +30,14 @@ const FormPageStyled = styled.div`
     background-color: ${myTheme.colors.primoryBg};
 `
 const FormImg = styled.img`
-    width: 400px;
-    margin-right: 100px;
+    max-width: 400px;
+    width: 100%;
+    object-fit: cover;
     border-radius: 50%;
-    box-shadow: 10px 5px 5px #5e5858;`
+    box-shadow: 10px 5px 5px #5e5858;
+    @media ${myTheme.media.tablet} {
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+`
 

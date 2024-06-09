@@ -11,7 +11,7 @@ export const SubTitles =styled.h2<SubTitleProps>`
     align-items: center;
     text-align: center;
     font-weight: 500;
-    font-size: 48px;
+    font-size: calc( (100vw - 360px) / (1440 - 360) * (48 - 24) + 24px);
     line-height: 100%;
     display: block;
     color: #374151;

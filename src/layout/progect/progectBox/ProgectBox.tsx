@@ -19,23 +19,24 @@ export const ProgectBox = () => {
 };
 
 const ProgectBoxStyled = styled.div`
-    width: 450px;
+    max-width: 450px;
+    width: 100%;
     border: 1px #ffff solid;
     padding: 23px 27px;
     margin: 0 auto;
-    margin-top: 785px;
     background: #fff;
 `
 const ProgectBoxTitle = styled.h2`
     margin-top: 0;
     margin-bottom: 0;
     font-weight: 500;
-    font-size: 18px;
+    font-size: calc( (100vw - 360px) / (1440 - 360) * (18 - 12) + 12px);
     line-height: 156%;
     color: #1f2937;
 `
 const ProgectBoxDescr = styled.p`
     margin-top: 5px;
     margin-bottom: 0;
+    font-size: calc( (100vw - 360px) / (1440 - 360) * (16 - 12) + 12px);
 `
 

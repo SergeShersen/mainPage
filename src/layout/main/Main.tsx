@@ -4,12 +4,13 @@ import styled from "styled-components";
 import {Conatiner} from "../../components/container/Conatiner";
 import {FlexWrapper} from "../../components/flexWrapper/FlexWrapper";
 import {MainDescr} from "./mainDescr/MainDescr";
+import {myTheme} from "../../styles/Theme.styled";
 
 export const Main = () => {
     return (
         <MainStyled>
             <Conatiner>
-                <FlexWrapper justify="space-between" align="center" wrap='wrap'>
+                <FlexWrapper justify="space-between" align="center" wrap='wrap-reverse'>
                     <MainDescr/>
                     <img src={photoMain} alt=""/>
                 </FlexWrapper>
@@ -24,9 +25,17 @@ const MainStyled = styled.div`
         margin-top: 20px;
         margin-bottom: 0;
         border: 1px solid #e5e7eb;
-        width: 622px;
+        max-width: 622px;
+        width: 100%;
         height: 0;
         background: #6b7280;
+    }    
+    @media ${myTheme.media.tablet} {
+        
+        img {
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
     }
 `
 

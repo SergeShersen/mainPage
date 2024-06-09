@@ -8,7 +8,7 @@ export const Planning = () => {
     return (
         <PlanningStyled>
             <Conatiner>
-                <FlexWrapper justify="space-between" align="center" wrap='wrap'>
+                <FlexWrapper justify="space-between" align="center" >
                     <PlanningItem nameIcons= 'chart' itemTitle='Business planning' itemDescription='Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'/>
                     <PlanningItem nameIcons= 'dollar' itemTitle='Financial planning' itemDescription='Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'/>
                     <PlanningItem nameIcons= 'search' itemTitle='Market Analytics' itemDescription='Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'/>

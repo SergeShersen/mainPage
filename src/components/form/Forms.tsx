@@ -17,7 +17,7 @@ export const Forms = () => {
                 <option value='project_3'>project_2</option>
                 <option value='project_4'>project_1</option>
             </DatalistStyled>
-            <ButtonStyled width='304px' href='#' color=''>Subscribe it</ButtonStyled>
+            <ButtonStyled width='304px' href='#'  type='submit'>Subscribe it</ButtonStyled>
         </FormsStyled>
     );
 };

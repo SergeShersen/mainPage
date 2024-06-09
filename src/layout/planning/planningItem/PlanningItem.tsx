@@ -25,9 +25,11 @@ export const PlanningItem = (props:PlanningItemProps) => {
 };
 
  const PlanningItemBox = styled.div`
-     width: 361px;
+     max-width: 361px;
+     width: 100%;
      div {
-         width: 140px;
+         max-width: 140px;
+         width: 100%;
          height: 140px;
          background:#eef2ff;
          border-radius: 6px;
@@ -39,7 +41,7 @@ export const PlanningItem = (props:PlanningItemProps) => {
  `
 const PlanningItemTitle = styled.h2`
     font-weight: 600;
-    font-size: 30px;
+    font-size: calc( (100vw - 360px) / (1440 - 360) * (30 - 15) + 15px);
     line-height: 120%;
     text-align: center;
     color: #374151;
@@ -49,7 +51,7 @@ const PlanningItemTitle = styled.h2`
 `
 const PlanningItemDescription = styled.p`
     font-weight: 400;
-    font-size: 18px;
+    font-size: calc( (100vw - 360px) / (1440 - 360) * (18 - 12) + 12px);
     line-height: 156%;
     text-align: center;
     color: #9ca3af;
