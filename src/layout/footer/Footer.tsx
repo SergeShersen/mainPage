@@ -24,11 +24,12 @@ const FooterStyled = styled.footer`
 
 const FooterDescrStyled = styled.p`
     font-weight: 400;
-    font-size: 18px;
+    font-size: calc( (100vw - 360px) / (1440 - 360) * (18 - 12) + 12px);
     line-height: 156%;
     text-align: center;
     color: #9ca3af;
-    width: 664px;
+    max-width: 664px;
+    width: 100%;
     margin: 0 auto;
     margin-top: 20px;
 `

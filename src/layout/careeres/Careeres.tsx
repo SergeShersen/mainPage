@@ -12,7 +12,7 @@ export const Careeres = () => {
         <CareersStyled>
             <Conatiner>
                 <SubTitles marginBottom = '150px'>Careeres</SubTitles>
-                <FlexWrapper justify='space-between' align="center" wrap='wrap'>
+                <FlexWrapper justify='space-between'  >
                     <Company/>
                     <Position/>
                     <Year/>

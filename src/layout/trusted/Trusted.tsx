@@ -37,13 +37,32 @@ const TrustedStyled =styled.div`
     padding: 100px 0;
     a {
         color: ${myTheme.colors.iconsColor};
-            &:hover {
-                color: ${myTheme.colors.secondaryBg};
+        
+        &:hover {
+            color: ${myTheme.colors.secondaryBg};
+        }
+        
+    }
+    @media ${myTheme.media.laptop} {
+        a {
+            &:last-child{
+                display: none;
             }
         }
+    }
     @media ${myTheme.media.tablet} {
         a {
-            &:last-child {
+            &:last-child{
+                display: none;
+            }
+            &:nth-child(4){
+                display: none;
+            }
+        }
+    }
+    @media ${myTheme.media.mobile} {
+        a {
+            &:last-child{
                 display: none;
             }
         }

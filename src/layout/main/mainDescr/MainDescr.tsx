@@ -24,6 +24,15 @@ export const MainDescr = () => {
 const MainDescrStyled = styled.div `
     max-width: 622px;
     width: 100%;
+    @media ${myTheme.media.laptop} {
+        max-width: 1159px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-left: 0;
+    }
     @media ${myTheme.media.tablet} {
         max-width: 768px;
         width: 100%;
@@ -53,6 +62,16 @@ const Name = styled.p`
         background-color: ${myTheme.colors.secondaryBg};
         top: 50%;
         left: 0;
+        @media ${myTheme.media.laptop} {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 102px;
+            height: 1px;
+            background-color: ${myTheme.colors.secondaryBg};
+            top: 50%;
+            left: -110px;
+        }
         @media ${myTheme.media.tablet} {
             content: '';
             position: absolute;
@@ -64,6 +83,13 @@ const Name = styled.p`
             left: -110px;
         }
     }
+    @media ${myTheme.media.laptop} {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 0;
+    }
+    
     @media ${myTheme.media.tablet} {
         display: flex;
         align-items: center;
@@ -77,7 +103,12 @@ const TitleMain = styled.h1`
     font-weight: 700;
     line-height: 100%;
     color: #1f2937;
-    width: 596px;
+    max-width: 596px;
+    width: 100%;
+    @media ${myTheme.media.laptop} {
+        text-align: center;
+    }
+    
     @media ${myTheme.media.tablet} {
         text-align: center;
     }
@@ -89,7 +120,8 @@ const Description = styled.p`
     font-size: 18px;
     line-height: 156%;
     color: #6b7280;
-    width: 553px;
+    max-width: 553px;
+    width: 100%;
 `
 const  DescrMini = styled(Description)`
     font-size: 12px;

@@ -31,6 +31,12 @@ const FormsStyled = styled.form`
         font-weight: 700;
         font-size: 20px;
         color: ${myTheme.colors.secondaryBg};
+        @media ${myTheme.media.tablet} {
+            text-align: center;
+        }
+        @media ${myTheme.media.mobile} {
+            text-align: center;
+        }
     }
 `
 

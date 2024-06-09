@@ -39,5 +39,9 @@ const FormImg = styled.img`
         margin: 0 auto;
         margin-bottom: 20px;
     }
+    @media ${myTheme.media.mobile} {
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
 `
 

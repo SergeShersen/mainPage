@@ -41,6 +41,13 @@ const SkillssStyled = styled.div`
         width: 100%;
         object-fit: cover;
     }
+    @media ${myTheme.media.laptop} {
+
+        img {
+            margin: 0 auto;
+            margin-bottom: 40px;
+        }
+    }
     @media ${myTheme.media.tablet} {
 
         img {
@@ -52,7 +59,11 @@ const SkillssStyled = styled.div`
 const WrapperBox =styled.div`
     max-width: 690px;
     width: 100%;
-    height: 532px;
+    @media ${myTheme.media.laptop} {
+        max-width: 1159px;
+        width: 100%;
+
+    }
     @media ${myTheme.media.tablet} {
         max-width: 768px;
         width: 100%;

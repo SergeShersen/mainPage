@@ -35,6 +35,9 @@ const SkillsSubtitle = styled.h2`
     font-size: 18px;
     line-height: 156%;
     color: #1f2937;
+    @media ${myTheme.media.laptop} {
+        text-align: center;
+    }
     @media ${myTheme.media.tablet} {
         text-align: center;
     }

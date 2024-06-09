@@ -41,7 +41,7 @@ export const PlanningItem = (props:PlanningItemProps) => {
  `
 const PlanningItemTitle = styled.h2`
     font-weight: 600;
-    font-size: calc( (100vw - 360px) / (1440 - 360) * (30 - 15) + 15px);
+    font-size: calc( (100vw - 320px) / (1440 - 320) * (30 - 15) + 15px);
     line-height: 120%;
     text-align: center;
     color: #374151;
@@ -51,7 +51,7 @@ const PlanningItemTitle = styled.h2`
 `
 const PlanningItemDescription = styled.p`
     font-weight: 400;
-    font-size: calc( (100vw - 360px) / (1440 - 360) * (18 - 12) + 12px);
+    font-size: calc( (100vw - 320px) / (1440 - 320) * (18 - 12) + 12px);
     line-height: 156%;
     text-align: center;
     color: #9ca3af;

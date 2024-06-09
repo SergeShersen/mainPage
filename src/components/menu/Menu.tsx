@@ -31,6 +31,11 @@ const NavStyle = styled.nav`
             display: none;
         }
     }
+    @media ${myTheme.media.mobile} {
+        a {
+            display: none;
+        }
+    }
     
 `
 const UlMenu = styled.ul`
@@ -56,5 +61,10 @@ const UlMenu = styled.ul`
     
     @media ${myTheme.media.tablet} {
         display: none;
+    }
+    @media ${myTheme.media.mobile} {
+        a {
+            display: none;
+        }
     }
 `

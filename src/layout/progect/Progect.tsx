@@ -45,6 +45,9 @@ const ProgectLink =styled.div `
     @media ${myTheme.media.tablet} {
         margin: 0 auto;
     }
+    @media ${myTheme.media.mobile} {
+        height: 600px;
+    }
 
 `
 
@@ -59,6 +62,9 @@ const ProgectPhotos = styled.div`
         &:last-child{
             margin-bottom: 0;
         }
+    }
+    @media ${myTheme.media.mobile} {
+        display: none;
     }
 
 `

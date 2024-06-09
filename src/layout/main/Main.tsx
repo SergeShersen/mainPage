@@ -25,11 +25,23 @@ const MainStyled = styled.div`
         margin-top: 20px;
         margin-bottom: 0;
         border: 1px solid #e5e7eb;
-        max-width: 622px;
+        max-width: 500px;
         width: 100%;
         height: 0;
         background: #6b7280;
     }    
+    img {
+        max-width: 478px;
+        width: 100%;
+        object-fit: cover;
+    }
+    @media ${myTheme.media.laptop} {
+
+        img {
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+    }
     @media ${myTheme.media.tablet} {
         
         img {

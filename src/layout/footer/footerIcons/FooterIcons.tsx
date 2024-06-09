@@ -7,7 +7,7 @@ import {myTheme} from "../../../styles/Theme.styled";
 export const FooterIcons = () => {
     return (
         <FooterIconsStyled>
-            <FlexWrapper justify={'space-between'} align={'center'} >
+            <FlexWrapper justify={'space-between'} align={'center'} wrap='wrap' >
                 <a href='https://www.google.by/?hl=ru'>
                     <Icons iconId={'facebool'} viewBox={'0 0 35 35'} width={'35'} height={'35'} />
                 </a>
@@ -34,7 +34,8 @@ export const FooterIcons = () => {
 };
 
 const FooterIconsStyled = styled.div`
-    width: 460px;
+    max-width: 460px;
+    width: 100%;
     margin: 0 auto;
     margin-top: 100px;
     a {
