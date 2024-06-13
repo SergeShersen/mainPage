@@ -1,48 +1,47 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled, {css} from "styled-components";
 import {myTheme} from "../../../styles/Theme.styled";
-import {ButtonStyled} from "../../buttons/Button";
-
 
 
 export const MobileMenu = (props: {menuItems: Array<string>
 }) => {
+    const [menuIsOpen,setmenuIsOpen] = useState(false)
+    const onBurgerBtnClick = () =>{setmenuIsOpen(!menuIsOpen)}
     return (
-
-        <NavStyle>
-            <BurgerButtom isOpen = {false}>
+        <NavStyleMobile>
+            <BurgerButtom isOpen = {menuIsOpen} onClick={ onBurgerBtnClick }>
                 <span></span>
             </BurgerButtom>
-            <MobileMenuPopup isOpen = {false}>
+            <MobileMenuPopup isOpen = {menuIsOpen}>
                 <UlMenu>
                     {props.menuItems.map((item:string,index:number)=> {
                         return( <li key={index}>
                             <a href='https://www.youtube.com/?app=desktop&hl=ru&gl=BY'>{item}</a>
-                        </li>)
+                        </li>
+                        )
                     })}
                 </UlMenu>
-                <ButtonStyled as='a' href='#' width='131px'>Hire me</ButtonStyled>
+
             </MobileMenuPopup>
-        </NavStyle>
+        </NavStyleMobile>
 
     );
 };
-const NavStyle = styled.nav`
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
+const NavStyleMobile = styled.nav`
+    display: none;
     @media ${myTheme.media.tablet} {
-        a {
-            display: none;
-        }
+        display: block;
+    }
+    @media ${myTheme.media.mobile} {
+        display: block;
     }
 `
 
 
 const UlMenu = styled.ul`
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
     list-style: none;
     align-items: center;
     gap: 80px;
@@ -59,18 +58,12 @@ const UlMenu = styled.ul`
             }
         }
     }
-    
-    @media ${myTheme.media.tablet} {
-        display: none;
-    }
 `
 
 const BurgerButtom = styled.button<{isOpen:boolean}> `
-    position: fixed;
-    width: 200px;
-    height: 200px;
-    top: -100px;
-    right: -100px;
+    position: relative;
+    width: 36px;
+    height: 36px;
     z-index: 99999999;
     span {
         display: block;
@@ -78,8 +71,6 @@ const BurgerButtom = styled.button<{isOpen:boolean}> `
         height: 2px;
         background-color: ${myTheme.colors.secondaryBg};
         position: absolute;
-        left: 40px;
-        bottom: 50px;
         ${props => props.isOpen && css<{isOpen:boolean}>`
             background-color: rgba( 255, 255, 255, 0 );
         `}
@@ -110,6 +101,7 @@ const BurgerButtom = styled.button<{isOpen:boolean}> `
         `}
         }
     }
+    
 `
 const MobileMenuPopup = styled.div<{isOpen: boolean}>`
     position: fixed;
@@ -118,8 +110,8 @@ const MobileMenuPopup = styled.div<{isOpen: boolean}>`
     right: 0;
     bottom: 0;
     z-index: 999;
-    background-color: burlywood;
     display: none;
+    background-color: burlywood;
     ${props => props.isOpen && css<{isOpen:boolean}>`
         display: flex;
         justify-content: center;

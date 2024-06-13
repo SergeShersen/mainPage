@@ -14,7 +14,7 @@ export const Progect = () => {
         <ProgectStyled>
             <Conatiner>
                 <SubTitles marginBottom='150px'>It’s great to always give the customer the <br/> best feed.</SubTitles>
-                <FlexWrapper justify="space-around"  >
+                <FlexWrapper justify="space-between"    >
                     <ProgectPhotos>
                         <img src={photoCar} />
                         <img src={photoCity}/>
@@ -28,16 +28,15 @@ export const Progect = () => {
     );
 };
 
-const ProgectStyled=styled.div`
-        padding: 120px 0;
+const ProgectStyled=styled.section`
 `
 const ProgectLink =styled.div `
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    padding-bottom: 10px ;
     max-width: 536px;
     width: 100%;
+    max-height: 900px;
     background-image: url("${photoHome}");
     background-repeat: no-repeat;
     background-size: cover;
@@ -54,6 +53,10 @@ const ProgectLink =styled.div `
 const ProgectPhotos = styled.div`
     max-width: 619px;
     width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-direction: column;
     img {
         max-width: 619px;
         width: 100%;

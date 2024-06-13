@@ -25,8 +25,7 @@ export const FormPage = () => {
     );
 };
 
-const FormPageStyled = styled.div`
-    padding: 100px 0;
+const FormPageStyled = styled.section`
     background-color: ${myTheme.colors.primoryBg};
 `
 const FormImg = styled.img`

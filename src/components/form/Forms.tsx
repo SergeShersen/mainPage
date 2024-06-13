@@ -26,7 +26,8 @@ const FormsStyled = styled.form`
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 304px;
+    max-width: 304px;
+    width: 100%;
     label {
         font-weight: 700;
         font-size: 20px;
@@ -41,7 +42,8 @@ const FormsStyled = styled.form`
 `
 
 const  InputStyled = styled.input`
-    width: 304px;
+    max-width: 304px;
+    width: 100%;
     font-weight: 400;
     font-size: 17px;
     height: 50px;
@@ -50,7 +52,8 @@ const  InputStyled = styled.input`
     padding-left: 20px;
 `
 const DatalistStyled = styled.datalist`
-    width: 304px;
+    max-width: 304px;
+    width: 100%;
     font-weight: 400;
     font-size: 17px;
     height: 50px;

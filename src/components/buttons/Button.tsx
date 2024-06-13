@@ -13,10 +13,10 @@ export const ButtonStyled =styled.a<ButtonProps>`
     font-size: 18px;
     border: 1px solid #3730a3;
     border-radius: 6px;
-    width: ${props => props.width};
+    max-width: ${props => props.width};
     text-decoration: none;
     text-align: center;
-    padding: 12px 0;
+    padding: 12px 12px;
     color: #3730a3;
     background: ${props => props.color || 'none'};
     margin-right: ${props => props.margin || '0'};

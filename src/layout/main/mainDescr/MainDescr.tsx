@@ -42,6 +42,15 @@ const MainDescrStyled = styled.div `
         flex-direction: column;
         padding-left: 0;
     }
+    @media ${myTheme.media.mobile} {
+        max-width: 576px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-left: 0;
+    }
     
 `
 const Name = styled.p`
@@ -82,6 +91,16 @@ const Name = styled.p`
             top: 50%;
             left: -110px;
         }
+        @media ${myTheme.media.mobile} {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 102px;
+            height: 1px;
+            background-color: ${myTheme.colors.secondaryBg};
+            top: 50%;
+            left: -110px;
+        }
     }
     @media ${myTheme.media.laptop} {
         display: flex;
@@ -91,6 +110,12 @@ const Name = styled.p`
     }
     
     @media ${myTheme.media.tablet} {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 0;
+    }
+    @media ${myTheme.media.mobile} {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -110,6 +135,9 @@ const TitleMain = styled.h1`
     }
     
     @media ${myTheme.media.tablet} {
+        text-align: center;
+    }
+    @media ${myTheme.media.mobile} {
         text-align: center;
     }
 `

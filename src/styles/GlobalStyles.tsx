@@ -25,6 +25,9 @@ export const GlobalStyles = createGlobalStyle`
         border: none;
     }
     h1 {
-        font-size: calc( (100vw - 360px) / (1440 - 360) * (72 - 36) + 36px);
+        font-size: calc( (100vw - 320px) / (1920 - 320) * (72 - 36) + 36px);
+    }
+    section {
+        padding: 100px 0;
     }
 `

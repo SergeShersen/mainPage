@@ -53,8 +53,19 @@ const UlMenu = styled.ul`
         a {
             text-decoration: none;
             color: #6b7280;
+            position: relative;
+            z-index: 0;
             &:hover {
-                color: #6b7280;
+               &:after {
+                   position: absolute;
+                   content: '';
+                   width: 100%;
+                   height: 10px;
+                   bottom: 0;
+                   background: #FEF2F2;
+                   display: block;
+                   z-index: -1;
+               }
             }
         }
     }

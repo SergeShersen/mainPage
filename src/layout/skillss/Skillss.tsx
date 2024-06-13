@@ -34,8 +34,7 @@ export const Skillss = () => {
     );
 };
 
-const SkillssStyled = styled.div`
-    padding-bottom: 150px;
+const SkillssStyled = styled.section`
     img {
         max-width: 440px;
         width: 100%;

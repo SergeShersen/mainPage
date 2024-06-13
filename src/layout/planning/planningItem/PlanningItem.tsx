@@ -11,9 +11,9 @@ import styled from "styled-components";
 export const PlanningItem = (props:PlanningItemProps) => {
     return (
         <PlanningItemBox>
-            <div>
+            <span>
                 <Icons iconId={`${props.nameIcons}`} height={'35'} width={'35'} viewBox={'0 0 35 35'}/>
-            </div>
+            </span>
             <PlanningItemTitle>
                 {props.itemTitle}
             </PlanningItemTitle>
@@ -27,7 +27,7 @@ export const PlanningItem = (props:PlanningItemProps) => {
  const PlanningItemBox = styled.div`
      max-width: 361px;
      width: 100%;
-     div {
+     span {
          max-width: 140px;
          width: 100%;
          height: 140px;

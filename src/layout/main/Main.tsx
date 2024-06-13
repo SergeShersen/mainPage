@@ -19,8 +19,7 @@ export const Main = () => {
     );
 };
 
-const MainStyled = styled.div`
-    padding: 180px 0 120px 0;
+const MainStyled = styled.section`
     hr {
         margin-top: 20px;
         margin-bottom: 0;

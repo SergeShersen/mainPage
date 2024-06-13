@@ -18,6 +18,5 @@ export const Planning = () => {
     );
 };
 
-const PlanningStyled = styled.div`
-    padding-bottom: 100px;
+const PlanningStyled = styled.section`
 `

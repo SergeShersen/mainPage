@@ -32,9 +32,8 @@ export const Trusted = () => {
     );
 };
 
-const TrustedStyled =styled.div`
+const TrustedStyled =styled.section`
     background: #fef2f2;
-    padding: 100px 0;
     a {
         color: ${myTheme.colors.iconsColor};
         

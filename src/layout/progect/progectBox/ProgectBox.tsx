@@ -2,6 +2,7 @@ import React from 'react';
 import {FlexWrapper} from "../../../components/flexWrapper/FlexWrapper";
 import {Icons} from "../../../components/icons/Icons";
 import styled from "styled-components";
+import {myTheme} from "../../../styles/Theme.styled";
 
 export const ProgectBox = () => {
     return (
@@ -24,7 +25,13 @@ const ProgectBoxStyled = styled.div`
     border: 1px #ffff solid;
     padding: 23px 27px;
     margin: 0 auto;
+    margin-bottom: 10px;
     background: #fff;
+    @media ${myTheme.media.tablet} {
+        max-width: 300px;
+        width: 100%;
+        padding: 15px 20px;
+    }
 `
 const ProgectBoxTitle = styled.h2`
     margin-top: 0;
