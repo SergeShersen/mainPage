@@ -3,7 +3,7 @@ import {Conatiner} from "../../components/container/Conatiner";
 import {SubTitles} from "../../components/subTitles/SubTitles";
 import styled from "styled-components";
 
-const TablePage = () => {
+export const TablePage = () => {
     return (
         <TablePageStyled>
             <Conatiner>
@@ -70,4 +70,3 @@ const TableStyled =styled.table`
     }
 `
 
-export default TablePage;

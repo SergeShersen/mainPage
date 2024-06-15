@@ -39,6 +39,7 @@ const SkillssStyled = styled.section`
         max-width: 440px;
         width: 100%;
         object-fit: cover;
+        box-shadow: 10px 5px 5px #656060;
     }
     @media ${myTheme.media.laptop} {
 
@@ -48,6 +49,13 @@ const SkillssStyled = styled.section`
         }
     }
     @media ${myTheme.media.tablet} {
+
+        img {
+            margin: 0 auto;
+            margin-bottom: 40px;
+        }
+    }
+    @media ${myTheme.media.mobile} {
 
         img {
             margin: 0 auto;

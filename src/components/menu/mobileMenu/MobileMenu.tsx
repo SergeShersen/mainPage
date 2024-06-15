@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import styled, {css} from "styled-components";
 import {myTheme} from "../../../styles/Theme.styled";
+import {MenuComponent} from "../menuComponent/MenuComponent";
 
 
 export const MobileMenu = (props: {menuItems: Array<string>
@@ -13,15 +14,7 @@ export const MobileMenu = (props: {menuItems: Array<string>
                 <span></span>
             </BurgerButtom>
             <MobileMenuPopup isOpen = {menuIsOpen}>
-                <UlMenu>
-                    {props.menuItems.map((item:string,index:number)=> {
-                        return( <li key={index}>
-                            <a href='https://www.youtube.com/?app=desktop&hl=ru&gl=BY'>{item}</a>
-                        </li>
-                        )
-                    })}
-                </UlMenu>
-
+                <MenuComponent menuItems={props.menuItems} />
             </MobileMenuPopup>
         </NavStyleMobile>
 
@@ -34,29 +27,6 @@ const NavStyleMobile = styled.nav`
     }
     @media ${myTheme.media.mobile} {
         display: block;
-    }
-`
-
-
-const UlMenu = styled.ul`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    list-style: none;
-    align-items: center;
-    gap: 80px;
-    li {
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 156%;
-
-        a {
-            text-decoration: none;
-            color: #6b7280;
-            &:hover {
-                color: ${myTheme.colors.secondaryBg};
-            }
-        }
     }
 `
 

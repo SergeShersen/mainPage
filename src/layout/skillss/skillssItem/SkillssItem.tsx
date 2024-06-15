@@ -30,7 +30,7 @@ const SkillItemWrapper = styled.div`
     width: 100%;
     margin-bottom: 40px;
 `
-const SkillsSubtitle = styled.h2`
+const SkillsSubtitle = styled.h3`
     font-weight: 600;
     font-size: 18px;
     line-height: 156%;
@@ -51,7 +51,8 @@ const SkillsDescr = styled.p`
     font-size: 12px;
     line-height: 133%;
     color: #6b7280;
-    width: 311px;
+    max-width: 311px;
+    width: 100%;
 `
 const SkillsLink = styled.a`
     display: block;

@@ -10,7 +10,7 @@ export const Trusted = () => {
         <TrustedStyled>
             <Conatiner>
                 <TitleTrusted>Trusted by</TitleTrusted>
-                <FlexWrapper justify="space-between"  wrap='wrap'>
+                <FlexWrapper justify="space-between" wrap='wrap' >
                     <a href='#'>
                         <Icons iconId={'aphabet'} height={'51'} width={'157'}/>
                     </a>

@@ -66,7 +66,8 @@ const Name = styled.p`
         content: '';
         position: absolute;
         display: block;
-        width: 102px;
+        max-width: 102px;
+        width: 100%;
         height: 1px;
         background-color: ${myTheme.colors.secondaryBg};
         top: 50%;
@@ -95,11 +96,12 @@ const Name = styled.p`
             content: '';
             position: absolute;
             display: block;
-            width: 102px;
+            max-width: 60px;
+            width: 100%;
             height: 1px;
             background-color: ${myTheme.colors.secondaryBg};
             top: 50%;
-            left: -110px;
+            left: -60px;
         }
     }
     @media ${myTheme.media.laptop} {

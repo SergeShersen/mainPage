@@ -1,6 +1,7 @@
 import React from 'react';
 import {Icons} from "../../../components/icons/Icons";
 import styled from "styled-components";
+import {myTheme} from "../../../styles/Theme.styled";
 
  type PlanningItemProps = {
      nameIcons?: string
@@ -28,18 +29,31 @@ export const PlanningItem = (props:PlanningItemProps) => {
      max-width: 361px;
      width: 100%;
      span {
-         max-width: 140px;
-         width: 100%;
-         height: 140px;
-         background:#eef2ff;
-         border-radius: 6px;
-         margin: 0 auto;
          display: flex;
          align-items: center;
          justify-content: center;
+         &{
+             content: '';
+             max-width: 140px;
+             width: 100%;
+             height: 140px;
+             background:#eef2ff;
+             border-radius: 6px;
+             margin: 0 auto;
+             @media ${myTheme.media.mobile} {
+                 max-width: 80px;
+                 height: 80px;
+                 width: 100%;
+             }
+             @media ${myTheme.media.tablet} {
+                 max-width: 100px;
+                 height: 100px;
+                 width: 100%;
+             }
+         }
      }
  `
-const PlanningItemTitle = styled.h2`
+const PlanningItemTitle = styled.h3`
     font-weight: 600;
     font-size: calc( (100vw - 320px) / (1440 - 320) * (30 - 15) + 15px);
     line-height: 120%;

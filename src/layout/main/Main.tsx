@@ -28,11 +28,22 @@ const MainStyled = styled.section`
         width: 100%;
         height: 0;
         background: #6b7280;
-    }    
+        @media ${myTheme.media.laptop} {
+            max-width: 560px;
+            width: 100%;
+        }
+        @media ${myTheme.media.tablet} {
+            max-width: 560px;
+            width: 100%;
+        }
+        
+        
+    }
     img {
         max-width: 478px;
         width: 100%;
         object-fit: cover;
+        box-shadow: 10px 5px 5px #656060;
     }
     @media ${myTheme.media.laptop} {
 
@@ -43,6 +54,13 @@ const MainStyled = styled.section`
     }
     @media ${myTheme.media.tablet} {
         
+        img {
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+    }
+    @media ${myTheme.media.mobile} {
+
         img {
             margin: 0 auto;
             margin-bottom: 20px;

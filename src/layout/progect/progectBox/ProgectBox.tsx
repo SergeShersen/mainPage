@@ -27,13 +27,19 @@ const ProgectBoxStyled = styled.div`
     margin: 0 auto;
     margin-bottom: 10px;
     background: #fff;
+    @media ${myTheme.media.laptop} {
+        max-width: 400px;
+        width: 100%;
+        padding: 15px 20px;
+    }
+    
     @media ${myTheme.media.tablet} {
         max-width: 300px;
         width: 100%;
         padding: 15px 20px;
     }
 `
-const ProgectBoxTitle = styled.h2`
+const ProgectBoxTitle = styled.h3`
     margin-top: 0;
     margin-bottom: 0;
     font-weight: 500;

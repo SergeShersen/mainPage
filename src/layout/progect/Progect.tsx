@@ -29,6 +29,9 @@ export const Progect = () => {
 };
 
 const ProgectStyled=styled.section`
+    ${FlexWrapper} {
+        gap: 10px;
+    }
 `
 const ProgectLink =styled.div `
     display: flex;
