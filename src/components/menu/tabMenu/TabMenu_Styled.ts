@@ -1,28 +1,8 @@
-import React from 'react';
-import styled from "styled-components";
 import {myTheme} from "../../../styles/Theme.styled";
+import styled from "styled-components";
 
-
-
-
-
-export const TabeMenu = (props: {tabsItems: Array<{status: 'services' | 'works' | 'blog', title: string}>
-}) => {
-    return (
-            <UlTabMenu>
-                {props.tabsItems.map((item:{status: 'services' | 'works' | 'blog', title: string},index:number)=> {
-                    return( <li key={index}>
-                        <a href='https://www.youtube.com/?app=desktop&hl=ru&gl=BY'>{item.title}</a>
-                    </li>)
-                })}
-            </UlTabMenu>
-    );
-};
-
-
-const UlTabMenu = styled.ul`
+const TabMenu = styled.ul`
     display: flex;
-    flex-wrap: wrap;
     list-style: none;
     align-items: center;
     justify-content: center;
@@ -61,3 +41,6 @@ const UlTabMenu = styled.ul`
     }
 
 `
+export const S = {
+    TabMenu,
+}

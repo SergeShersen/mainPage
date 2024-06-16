@@ -3,7 +3,7 @@ import {Conatiner} from "../../components/container/Conatiner";
 import {SubTitles} from "../../components/subTitles/SubTitles";
 import styled from "styled-components";
 
-export const TablePage = () => {
+export const TablePage:React.FC = () => {
     return (
         <TablePageStyled>
             <Conatiner>

@@ -5,7 +5,7 @@ import {Trusted} from "./layout/trusted/Trusted";
 import {Progect} from "./layout/progect/Progect";
 import {Footer} from "./layout/footer/Footer";
 import {Planning} from "./layout/planning/Planning";
-import {Skillss} from "./layout/skillss/Skillss";
+import {Skills} from "./layout/skillss/Skills";
 import {FormPage} from "./layout/forms/FormPage";
 import {TablePage} from "./layout/table/TablePage";
 import {TabePage} from "./layout/tabsePage/TabePage";
@@ -18,7 +18,7 @@ function App() {
             <Header/>
             <Main/>
             <TabePage/>
-            <Skillss/>
+            <Skills/>
             <Trusted/>
             <Progect/>
             <Planning/>

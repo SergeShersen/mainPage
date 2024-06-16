@@ -1,33 +1,16 @@
-import React from 'react';
+import {myTheme} from "../../styles/Theme.styled";
 import styled from "styled-components";
-import {ButtonStyled} from "../../../components/buttons/Button";
-import {myTheme} from "../../../styles/Theme.styled";
+import {FlexWrapper} from "../../components/flexWrapper/FlexWrapper";
+import {ButtonStyled} from "../../components/buttons/Button";
 
-type WorkTabProps = {
-    title?: string;
-    text?: string;
-    src?: string;
-    type?: string;
-}
-
-export const WorkTab = (props:WorkTabProps) => {
-    return (
-        <WorkTabStyled>
-            <ImageWrapper>
-                <Image src = {props.src}/>
-                <ButtonStyled>View project</ButtonStyled>
-            </ImageWrapper>
-            <BoxDescr>
-                <Title>{props.title}</Title>
-                <Text>{props.text}</Text>
-                <Link href= '#'>demo</Link>
-                <LinkSecond href='#'>code</LinkSecond>
-            </BoxDescr>
-        </WorkTabStyled>
-    );
-};
-
-const WorkTabStyled = styled.div`
+const TabePage = styled.section`
+    background: ${myTheme.colors.primoryBg};
+    ${FlexWrapper} {
+        gap: 30px;
+    }
+    
+`
+const WorkTab = styled.div`
     background-color: #FFF;
     width: 320px;
     flex-grow: 1;
@@ -140,3 +123,14 @@ const ImageWrapper =styled.div`
         cursor: pointer;
     }
 `
+export const  S = {
+    TabePage,
+    ImageWrapper,
+    LinkSecond,
+    Link,
+    Text,
+    Title,
+    Image,
+    BoxDescr,
+    WorkTab
+}

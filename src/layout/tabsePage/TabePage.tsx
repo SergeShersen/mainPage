@@ -1,16 +1,27 @@
 import React, {useState} from 'react';
 import {SubTitles} from "../../components/subTitles/SubTitles";
-
 import {Conatiner} from "../../components/container/Conatiner";
 import {FlexWrapper} from "../../components/flexWrapper/FlexWrapper";
-import {WorkTab} from "../table/workTab/WorkTab";
-import styled from "styled-components";
-import {myTheme} from "../../styles/Theme.styled";
+import {WorkTab} from "./workTab/WorkTab";
 import businessImg from '../../assets/img/city.webp'
 import financialssImg from '../../assets/img/car.webp'
-import {TabeMenu} from "../../components/menu/tabMenu/TabeMenu";
+import {TabMenu} from "../../components/menu/tabMenu/TabMenu";
+import {S} from '../tabsePage/Tabs_Styled'
 
+const tabData = [
+    {
+        src: businessImg,
+        title: 'Business planning',
+        text: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
 
+    },
+    {
+        src: financialssImg,
+        title: 'Financial planning',
+        text: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    }
+
+]
 
 const  tabsItems :Array<{status: 'services' | 'works' | 'blog', title: string}> = [
     {
@@ -34,27 +45,20 @@ export const TabePage = () => {
 
     }
     return (
-        <TabePageStyled>
+        <S.TabePage>
             <Conatiner>
                 <SubTitles>Tabs</SubTitles>
-                <TabeMenu tabsItems={tabsItems}/>
+                <TabMenu tabsItems={tabsItems}/>
                 <FlexWrapper justify='space-between'  wrap='wrap'>
-                    <WorkTab src={businessImg} title='Business planning'
-                             text='Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-                             type = 'services'/>
-                    <WorkTab src={financialssImg} title='Financial planning'
-                             text='Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-                             type ='works' />
+                    {tabData.map((t) => {
+                        return <WorkTab src={t.src}
+                                        title={t.title}
+                                        text= {t.text}
+                        />
+                    })}
                 </FlexWrapper>
             </Conatiner>
-        </TabePageStyled>
+        </S.TabePage>
     );
 };
 
-const TabePageStyled = styled.section`
-    background: ${myTheme.colors.primoryBg};
-    ${FlexWrapper} {
-        gap: 30px;
-    }
-    
-`

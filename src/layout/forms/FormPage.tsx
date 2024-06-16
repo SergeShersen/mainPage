@@ -1,46 +1,26 @@
 import React from 'react';
 import {Conatiner} from "../../components/container/Conatiner";
-import {Logo} from "../../components/logo/Logo";
-import {Forms} from "../../components/form/Forms";
+import {Forms} from "./form/Forms";
 import {FlexWrapper} from "../../components/flexWrapper/FlexWrapper";
-import styled from "styled-components";
 import {SubTitles} from "../../components/subTitles/SubTitles";
-import {myTheme} from "../../styles/Theme.styled";
 import photoForms from '../../assets/img/main.webp'
+import {S} from "../forms/Form_Styled"
 
 
-
-export const FormPage = () => {
+export const FormPage:React.FC = () => {
     return (
-        <FormPageStyled>
+        <S.FormPage>
             <Conatiner>
                 <SubTitles marginBottom='40px'>Subscribe</SubTitles>
                 <FlexWrapper  align='center' justify='space-around' wrap='wrap'>
-                    <FormImg src={photoForms}/>
+                    <S.Img src={photoForms}/>
                     <Forms/>
                 </FlexWrapper>
             </Conatiner>
-        </FormPageStyled>
+        </S.FormPage>
 
     );
 };
 
-const FormPageStyled = styled.section`
-    background-color: ${myTheme.colors.primoryBg};
-`
-const FormImg = styled.img`
-    max-width: 400px;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    box-shadow: 10px 5px 5px #5e5858;
-    @media ${myTheme.media.tablet} {
-        margin: 0 auto;
-        margin-bottom: 20px;
-    }
-    @media ${myTheme.media.mobile} {
-        margin: 0 auto;
-        margin-bottom: 20px;
-    }
-`
+
 

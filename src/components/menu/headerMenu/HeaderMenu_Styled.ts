@@ -1,33 +1,43 @@
-import React, {useState} from 'react';
-import styled, {css} from "styled-components";
 import {myTheme} from "../../../styles/Theme.styled";
-import {MenuComponent} from "../menuComponent/MenuComponent";
+import styled, {css} from "styled-components";
 
+const UlMenu = styled.ul`
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    align-items: center;
+    gap: 80px;
+    margin-right: 80px;
+    li {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 156%;
 
-export const MobileMenu = (props: {menuItems: Array<string>
-}) => {
-    const [menuIsOpen,setmenuIsOpen] = useState(false)
-    const onBurgerBtnClick = () =>{setmenuIsOpen(!menuIsOpen)}
-    return (
-        <NavStyleMobile>
-            <BurgerButtom isOpen = {menuIsOpen} onClick={ onBurgerBtnClick }>
-                <span></span>
-            </BurgerButtom>
-            <MobileMenuPopup isOpen = {menuIsOpen}>
-                <MenuComponent menuItems={props.menuItems} />
-            </MobileMenuPopup>
-        </NavStyleMobile>
-
-    );
-};
-const NavStyleMobile = styled.nav`
-    display: none;
-    @media ${myTheme.media.tablet} {
-        display: block;
+        a {
+            text-decoration: none;
+            color: #6b7280;
+            position: relative;
+            &:hover {
+                &:after {
+                    position: absolute;
+                    content: '';
+                    width: 100%;
+                    height: 10px;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    background: #c5b0e4;
+                    display: inline-block;
+                    z-index: -1;
+                }
+            }
+        }
     }
     @media ${myTheme.media.mobile} {
-        display: block;
+        margin-right: 0;
     }
+`
+const NavMobile = styled.nav`
 `
 
 const BurgerButtom = styled.button<{isOpen:boolean}> `
@@ -95,3 +105,15 @@ const MobileMenuPopup = styled.div<{isOpen: boolean}>`
         align-items: center;
     }
 `
+const DesktopMenu = styled.nav`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+`
+export const S = {
+    UlMenu,
+    MobileMenuPopup,
+    BurgerButtom,
+    NavMobile,
+    DesktopMenu,
+}
