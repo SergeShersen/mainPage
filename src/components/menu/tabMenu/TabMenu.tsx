@@ -1,15 +1,20 @@
 import React from 'react';
 import {S} from '../tabMenu/TabMenu_Styled'
 
+export type TabsStatusType = 'services' | 'works' | 'blog'
 
-export const TabMenu: React.FC<{tabsItems: Array<{status: 'services' | 'works' | 'blog', title: string}>
-}> = (props: {tabsItems: Array<{status: 'services' | 'works' | 'blog', title: string}>
-}) => {
+type TabMenuPropsType = {
+    tabsItems:Array<{status: TabsStatusType, title: string}>
+    changeFilterStatus: (value: TabsStatusType) => void
+    currentFilterStatus: string
+}
+
+export const TabMenu = (props:TabMenuPropsType) => {
     return (
             <S.TabMenu>
-                {props.tabsItems.map((item:{status: 'services' | 'works' | 'blog', title: string},index:number)=> {
+                {props.tabsItems.map((item:{status: TabsStatusType, title: string},index:number)=> {
                     return( <li key={index}>
-                        <a href='https://www.youtube.com/?app=desktop&hl=ru&gl=BY'>{item.title}</a>
+                        <S.Link as={'button'} active={props.currentFilterStatus === item.status} onClick={()=> {props.changeFilterStatus(item.status)}}>{item.title}</S.Link>
                     </li>)
                 })}
             </S.TabMenu>

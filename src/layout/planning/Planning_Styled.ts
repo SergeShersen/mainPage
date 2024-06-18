@@ -31,7 +31,7 @@ const ItemBox = styled.div`
  `
 const Title = styled.h3`
     font-weight: 600;
-    font-size: calc( (100vw - 320px) / (1440 - 320) * (30 - 15) + 15px);
+    font-size: calc( (100vw - 320px) / (1920 - 320) * (30 - 15) + 15px);
     line-height: 120%;
     text-align: center;
     color: #374151;

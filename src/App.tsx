@@ -9,6 +9,7 @@ import {Skills} from "./layout/skillss/Skills";
 import {FormPage} from "./layout/forms/FormPage";
 import {TablePage} from "./layout/table/TablePage";
 import {TabePage} from "./layout/tabsePage/TabePage";
+import {SliderPage} from "./layout/sliderPage/SliderPage";
 
 
 
@@ -21,6 +22,7 @@ function App() {
             <Skills/>
             <Trusted/>
             <Progect/>
+            <SliderPage/>
             <Planning/>
             <FormPage/>
             <TablePage/>
